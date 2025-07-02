@@ -1,0 +1,31 @@
+<!-- templates/predict.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg p-4">
+            <h2 class="text-center mb-4">🧠 Predict Sentiment of Text</h2>
+            <p class="text-muted text-center">
+                Enter a text or comment below to analyze its sentiment using our trained model.
+            </p>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="tweet" class="form-label">Text or comment</label>
+                    <textarea name="tweet" id="tweet" class="form-control" rows="4" placeholder="Type or paste a text here..." required></textarea>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Predict Sentiment</button>
+                </div>
+            </form>
+
+            {% if sentiment %}
+            <div class="alert alert-info mt-4 text-center">
+                <h5 class="mb-0">🔍 <strong>Predicted Sentiment:</strong> {{ sentiment }}</h5>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
