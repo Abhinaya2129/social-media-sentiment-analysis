@@ -1,40 +1,33 @@
-# 📊 Social Media Sentiment Analysis (Django)
+# Social Media Sentiment Analysis 💬
 
-This project is a web-based application built using **Django** that analyzes the sentiment of user-input social media text. It classifies the sentiment as **Positive**, **Negative**, or **Neutral** using a **machine learning model (Random Forest)** trained on real-world tweet data.
+This Django-based web application allows users to classify the sentiment of social media comments or tweets as **Positive**, **Negative**, or **Neutral** using a trained Random Forest model.
+
+## 🔧 Features
+
+- Upload and train model on a CSV of social media posts
+- Predict sentiment from user-inputted text
+- View accuracy and classification report
+- Clean web UI built using Django
+
+## 🧠 Tech Stack
+
+- Python
+- Django
+- HTML + Bootstrap
+- Machine Learning: `scikit-learn`, `TfidfVectorizer`, `RandomForestClassifier`
+- Model persistence: `joblib`
+
+## 🚫 Note
+The trained model file (`sentiment_model.pkl`) is excluded from this repository to avoid GitHub's 100MB file size limit. You can retrain it using the "Train Model" feature on the website or upload it separately.
+
+## 🚀 Deployment
+Best deployed using [Render](https://render.com) or [Railway](https://railway.app) for Django apps.
 
 ---
 
-## 🌐 Features
+## 📂 Setup Instructions
 
-- 📝 User input form to analyze any text/tweet
-- 📈 Train the sentiment analysis model from the admin panel
-- 📊 Displays model accuracy and classification report
-- 💾 Saves trained model and vectorizer using `joblib`
-- 🔐 Session-based user authentication
-- 💬 Real-time sentiment prediction with user-friendly UI
-
----
-
-## 🛠️ Tech Stack
-
-- **Backend:** Django (Python)
-- **Frontend:** HTML, CSS (Bootstrap), JavaScript
-- **ML Model:** Random Forest Classifier (with TF-IDF)
-- **Libraries:** `scikit-learn`, `pandas`, `joblib`
-- **Deployment:** [Render](https://render.com)
-
----
-
-## 🚀 Getting Started
-
-### 🔗 Live Project
-
-👉 [Click here to open the live app](https://social-media-sentiment-analysis.onrender.com)
-
-> _If the site takes a few seconds to load, it’s because free Render services spin down after inactivity._
-
-### 1. Clone the Repo
-
-```bash
-git clone https://github.com/Abhinaya2129/social-media-sentiment-analysis.git
-cd social-media-sentiment-analysis
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Abhinaya2129/social-media-sentiment-analysis.git
+   cd social-media-sentiment-analysis
