@@ -51,8 +51,7 @@ def train_model_view(request):
 
             # Load dataset
             print("📂 Loading dataset...")
-            df = pd.read_csv(os.path.join(BASE_DIR, r'socialmedia_comments.csv\\socialmedia_comments.csv'), header=None,
-                             names=['ID', 'Entity', 'Sentiment', 'Tweet'])
+            df = pd.read_csv(os.path.join(BASE_DIR, 'socialmedia_comments.csv'), header=None, names=['ID', 'Entity', 'Sentiment', 'Tweet'])
             print("✅ Dataset loaded. Total records:", len(df))
 
             # Preprocessing
@@ -114,7 +113,7 @@ if os.path.exists(MODEL_PATH) and os.path.exists(VECTORIZER_PATH):
 else:
     model = None
     vectorizer = None
-    
+
 def predict_sentiment(request):
     sentiment = ""
     error = ""
