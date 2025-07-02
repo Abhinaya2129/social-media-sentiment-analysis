@@ -23,6 +23,10 @@ The trained model file (`sentiment_model.pkl`) is excluded from this repository 
 ## 🚀 Deployment
 Best deployed using [Render](https://render.com) or [Railway](https://railway.app) for Django apps.
 
+### 📡 Live Demo
+
+👉 **[Try the App on Render](https://social-media-sentiment-analysis-uns9.onrender.com)**
+
 ---
 
 ## 📂 Setup Instructions
